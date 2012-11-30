@@ -216,7 +216,7 @@ body {
 	float: left;
 	display: block;
 	cursor: pointer;
-	width: 90px;
+	width: 100px;
 	color: #949694;
 	font-weight: bold;
 	margin-right: 2px;
@@ -246,7 +246,7 @@ li.tit_bj_left{
 .lib_Menubox li.hover,li#one1.hover,li#one2.hover,li#one3.hover,li#one4.hover{
 
 	padding:0px;
-	width:90px;
+	width:120px;
 	color:#06C;
 	background-image: url(../images/tit01_hover.jpg);
 	background-repeat: no-repeat;
