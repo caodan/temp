@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Language" content="zh-CN" /> 
+<meta http-equiv="Content-Language" content="zh-CN" />
 <meta name="keywords" content="网页有关">
 <link rel="stylesheet" rev="stylesheet" href="css/main.css" type="text/css" media="screen" />
 <script type="text/javascript" src="js/jquery-1.7.1.min.js" charset="UTF-8"></script>
@@ -115,7 +115,7 @@
 <div id="index-content">
 
 	<div id="right">
-		<div id="pic_news">	
+		<div id="pic_news">
 			<div id="pic_news_info"></div>
 			<ul>
 				<li class="on">1</li>
@@ -161,7 +161,15 @@
 			</ul>
 		</div><!-- #news-list end -->
 		<div id="search">
-			<form action="search.php" method="get">
+			<form action="http://www.google.cn/custom" method="get" target="google_window">
+				<input type="hidden" value="usth.edu.cn" name="domains"></input>
+				<input type="hidden" check="CHECKED" value="usth.edu.cn" name="sitesearch"></input>
+				<input type="hidden" value="pub-5984329405570537" name="client"></input>
+				<input type="hidden" value="1" name="forid"></input>
+				<input type="hidden" value="GB2312" name="ie"></input>
+				<input type="hidden" value="GB2312" name="oe"></input>
+				<input type="hidden" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:39;LW:96;FORID:1;" name="cof"></input>
+				<input type="hidden" value="zh-CN" name="hl"></input>
 				<input id="keyword" maxlength="255" name="q" onblur="if (value ==''){value='请输入关键字'}" onmouseover="this.focus()" onfocus="this.select()" onclick="if(this.value=='请输入关键字') this.value=''" size="12" value="请输入关键字" />
 				<input id="submit" type="image" alt="站内搜索" src="images/search_1.gif" name="sa" />
 			</form>
@@ -201,7 +209,7 @@
 						<td><a href="http://222.171.107.122:81/" target="_blank"></a></td>
 					</tr>
 					</tbody>
-				</table>		 
+				</table>
 			</div>
 			<div id="con_one_2" class="text_div" style="display: none; ">
 				<table width="340" border="0">
@@ -295,7 +303,7 @@ function setTab(name,cursel,n){
 
 //picture news show
 var t = n = 0, count;
-$(document).ready(function(){	
+$(document).ready(function(){
 	count=$("#pic_news_list a").length;
 	$("#pic_news_list a:not(:first-child)").hide();
 	$("#pic_news_info").html($("#pic_news_list a:first-child").find("img").attr('alt'));
@@ -321,6 +329,13 @@ function showAuto()
 	$("#pic_news li").eq(n).trigger('click');
 }
 
+//landscape toggle
+$(document).ready(function(){
+    $('#submitBtn').click(function() {
+        var imgSrc = $(this).next().find('.logo').attr('data-src');
+        $(this).next().find('.logo').attr('src', imgSrc);
+    });
+});
 </script>
 </body>
 </html>
