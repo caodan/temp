@@ -30,7 +30,7 @@ body {
 	overflow:hidden;
 	color: #000;
 	font-weight: bold;
-	margin: 33px 0 0 400px;
+	margin: 33px 0 0 365px;
 }
 
 #nav a:link, #nav a:visited, #nav a:active {
@@ -39,7 +39,7 @@ body {
 
 #nav a {
 	text-align: left;
-	padding: 5px 5px;
+	padding: 5px 3px;
 	font-size: 13px;
 }
 
@@ -216,7 +216,7 @@ body {
 	float: left;
 	display: block;
 	cursor: pointer;
-	width: 120px;
+	width: 100px;
 	color: #949694;
 	font-weight: bold;
 	margin-right: 2px;
@@ -292,7 +292,6 @@ li.tit_bj_left{
 	height:190px;
 	padding: 5px;
 	background: url(../images/case-frame.gif) no-repeat 0 0;
-	_background-image: none;
 }
 #pic_news img {
 	width: 260px;
