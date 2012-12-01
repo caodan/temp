@@ -9,6 +9,8 @@ a:active { color: #ccc;}
 body {
 	background: url(../images/bg.jpg) top left repeat-x;
 	color: red;
+	padding-left: 123px;
+	margin-bottom: 3px;
 }
 
 #page-container {
