@@ -30,7 +30,7 @@ body {
 	overflow:hidden;
 	color: #000;
 	font-weight: bold;
-	margin: 33px 0 0 365px;
+	margin: 33px 0 0 400px;
 }
 
 #nav a:link, #nav a:visited, #nav a:active {
@@ -39,7 +39,7 @@ body {
 
 #nav a {
 	text-align: left;
-	padding: 5px 3px;
+	padding: 5px 5px;
 	font-size: 13px;
 }
 
@@ -216,7 +216,7 @@ body {
 	float: left;
 	display: block;
 	cursor: pointer;
-	width: 100px;
+	width: 120px;
 	color: #949694;
 	font-weight: bold;
 	margin-right: 2px;
