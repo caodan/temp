@@ -198,7 +198,7 @@
 					</tbody>
 				</table>
 			</div>
-			<div id="con_one_2" class="text_div" style="display: none; ">
+			<div id="con_one_2" class="text_div" style="display: none;">
 				<table width="340" border="0">
 					<tbody>
 					<tr>
@@ -236,18 +236,7 @@
 	</div><!-- #index-center-box end -->
 
 	<div id="landscape">
-		<ul style="display: none;">
-			<li class="on">1</li>
-			<li>2</li>
-			<li>3</li>
-			<li>4</li>
-		</ul>
-		<div id="landscape_list">
 			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape1.jpg" title="橡树小屋的blog" alt="橡树小屋的教育个" /></a>
-			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog" /></a>
-			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape3.jpg" title="橡树小屋的blog" alt="橡树小屋的看见了" /></a>
-			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape4.jpg" title="橡树小屋的blog" alt="橡树小屋法国化" /></a>
-		</div>
 	</div><!-- #landscape end -->
 
 
@@ -301,25 +290,16 @@ function setTab(name,cursel,n){
 }
 
 //landscape toggle
-var t = n = 0, count;
-$(document).ready(function(){
-	count=$("#landscape_list a").length;
-	$("#landscape_list a:not(:first-child)").hide();
-	$("#landscape li").click(function() {
-		var i = $(this).text() - 1;
-		n = i;
-		if (i >= count) return;
-		$("#landscape_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
-		document.getElementById("landscape").style.background="";
-	});
-	t = setInterval("showAuto()", 4000);
-	$("#landscape").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
-})
-
-function showAuto() {
-	n = n >=(count - 1) ? 0 : ++n;
-	$("#landscape li").eq(n).trigger('click');
-}
+$(document).ready(function() {
+	PicArr = new Array("images/landscape1.jpg","images/landscape2.jpg","images/landscape3.jpg","images/landscape4.jpg");
+	CurrPic=1;
+	setInterval(changePic, 4000);
+	function changePic() {
+	imgSrc = PicArr[CurrPic];
+	$('#landscape img').attr('src', imgSrc);
+	CurrPic == PicArr.length-1 ? CurrPic = 0 : CurrPic ++;
+    }
+});
 </script>
 </body>
 </html>
