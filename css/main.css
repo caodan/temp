@@ -394,6 +394,8 @@ li.tit_bj_left{
 #landscape {
 	float:left;
 	width: 305px;
+	height: 420px;
+	overflow: hidden;
 }
 
 #water {

@@ -248,8 +248,20 @@
 	</div><!-- #index-center end -->
 	</div><!-- #index-center-box end -->
 
-
-	<div id="landscape"><img src="images/landscape1.jpg" alt="黑龙江科技学院风景" /></div>
+	<div id="landscape">
+		<ul style="display: none;">
+			<li class="on">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+		<div id="landscape_list">
+			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape1.jpg" title="橡树小屋的blog" alt="橡树小屋的教育个" /></a>
+			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape2.jpg" title="橡树小屋的blog" alt="橡树小屋的blog" /></a>
+			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape3.jpg" title="橡树小屋的blog" alt="橡树小屋的看见了" /></a>
+			<a href="http://www.usth.edu.cn/jpk/info/map/map.htm" target="_blank"><img src="images/landscape4.jpg" title="橡树小屋的blog" alt="橡树小屋法国化" /></a>
+		</div>
+	</div><!-- #landscape end -->
 
 
 </div><!-- #content end -->
@@ -301,41 +313,26 @@ function setTab(name,cursel,n){
 	}
 }
 
-//picture news show
+//landscape toggle
 var t = n = 0, count;
 $(document).ready(function(){
-	count=$("#pic_news_list a").length;
-	$("#pic_news_list a:not(:first-child)").hide();
-	$("#pic_news_info").html($("#pic_news_list a:first-child").find("img").attr('alt'));
-	$("#pic_news_info").click(function(){window.open($("#pic_news_list a:first-child").attr('href'), "_blank")});
-	$("#pic_news li").click(function() {
+	count=$("#landscape_list a").length;
+	$("#landscape_list a:not(:first-child)").hide();
+	$("#landscape li").click(function() {
 		var i = $(this).text() - 1;
 		n = i;
 		if (i >= count) return;
-		$("#pic_news_info").html($("#pic_news_list a").eq(i).find("img").attr('alt'));
-		$("#pic_news_info").unbind().click(function(){window.open($("#pic_news_list a").eq(i).attr('href'), "_blank")})
-		$("#pic_news_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
-		document.getElementById("pic_news").style.background="";
-		$(this).toggleClass("on");
-		$(this).siblings().removeAttr("class");
+		$("#landscape_list a").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
+		document.getElementById("landscape").style.background="";
 	});
 	t = setInterval("showAuto()", 4000);
-	$("#pic_news").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
+	$("#landscape").hover(function(){clearInterval(t)}, function(){t = setInterval("showAuto()", 4000);});
 })
 
-function showAuto()
-{
+function showAuto() {
 	n = n >=(count - 1) ? 0 : ++n;
-	$("#pic_news li").eq(n).trigger('click');
+	$("#landscape li").eq(n).trigger('click');
 }
-
-//landscape toggle
-$(document).ready(function(){
-    $('#submitBtn').click(function() {
-        var imgSrc = $(this).next().find('.logo').attr('data-src');
-        $(this).next().find('.logo').attr('src', imgSrc);
-    });
-});
 </script>
 </body>
 </html>
