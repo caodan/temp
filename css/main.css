@@ -23,11 +23,11 @@ body {
 
 #title {
 	height: 20px;
-	text-indent:-9999px;
+	text-indent: -9999px;
 }
 
 #nav {
-	overflow:hidden;
+	overflow: hidden;
 	display: block;
 	color: #000;
 	font-weight: bold;
@@ -35,42 +35,45 @@ body {
 }
 
 #nav .nav-list {
-    display:inline;
-    float:left;
-    z-index:100;/*ie6 hacker*/
+    display: inline;
+    float: left;
+    z-index: 100;/*ie6 hacker*/
 }
 
 #nav .nav-list a {
-    color:#000;
-    display:block;
+    color: #000;
+    display: block;
     padding: 5px;
     font-size: 13px;
 }
 
-#nav .nav-list li a:hover {
-    background: url(../images/a_bg.gif) repeat-x;
-}
-
 #nav .nav-list ul {
-    display:none;
-    position:absolute;
-    filter:alpha(opacity=90); /* IE transparent */
-    -moz-opacity:0.9; /* Moz + FF transparent */
+    display: none;
+    position: absolute;
+    filter: alpha(opacity=90); /* IE transparent */
+    -moz-opacity: 0.9; /* Moz + FF transparent */
     opacity: 0.9; /* CSS3 transparent */
     background-color: #e0effd;
-    border:1px solid #999;
+    border: 1px solid #999;
     padding: 3px 0;
     margin-left: 0px;
-    z-index:5;
+    z-index: 5;
 }
 
 #nav .nav-list li {
     width: 157px;
 }
 
+#nav .nav-list li a {
+	font-weight: normal;
+	text-decoration: none;
+	padding: 0 0 0 5px;
+	line-height: 20px;
+}
+
 #nav .nav-list li a:hover {
-    text-decoration:none;
-    color:#003;
+    background: url(../images/a_bg.gif) repeat-x;
+    color: #003;
 }
 
 #index-content {
@@ -82,12 +85,12 @@ body {
 #left {
 	width: 300px;
 	height: 395px;
-	float:left;
+	float: left;
 }
 
 #index-center-box {
 	width: 425px;
-	float:left;
+	float: left;
 }
 
 #index-center {
@@ -96,9 +99,6 @@ body {
 	overflow: hidden;
 }
 
-#news-list {
-
-}
 #news-list h2 {
 	height: 18px;
 	text-indent: -9999px;
@@ -108,7 +108,7 @@ body {
 	height: 18px;
 	width: 84px;
 	background: url(../images/title_news.gif) no-repeat;
-	display:block;
+	display: block;
 	float: left;
 }
 .more {
@@ -129,7 +129,7 @@ body {
 	text-decoration:none;
 }
 #news-list a:hover {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 #news-list span {
 	color: red;
@@ -142,10 +142,10 @@ body {
 }
 
 #search form {
-	float:left;
+	float: left;
 }
 #search input {
-	vertical-align:middle;
+	vertical-align: middle;
 	padding: 2px 4px;
 }
 #keyword {
@@ -157,8 +157,8 @@ body {
 
 #websites-list {
 	width: 400px;
-	margin-top:10px;
-	float:left;
+	margin-top: 10px;
+	float: left;
 }
 
 /*--Tab Toggle--*/
