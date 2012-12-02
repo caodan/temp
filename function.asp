@@ -190,7 +190,7 @@ Public Function NewGetArticleList(iChannelID, arrClassID, IncludeChild, iSpecial
         End If
         rsInfoList.Close
         Set rsInfoList = Nothing
-        NewGetArticleList = strInfoList
+        GetArticleList = strInfoList
         Exit Function
     End If
     If UsePage = True And ShowType < 6 Then
@@ -381,11 +381,11 @@ Public Function NewGetArticleList(iChannelID, arrClassID, IncludeChild, iSpecial
                 End If
             End If
         Case 5 '输出DIV
-            strInfoList = strInfoList & "<ul class=""" & CssName & """>"
-            strInfoList = strInfoList & strProperty & strLink
-            strInfoList = strInfoList & strAuthor & "<span>" & strUpdateTime & "</span>" & strHits
+            strInfoList = strInfoList & "<div class=""" & CssName & """>"
+            strInfoList = strInfoList & strProperty & "&nbsp;" & strLink
+            strInfoList = strInfoList & strAuthor & strUpdateTime & strHits
             strInfoList = strInfoList & strHotSign & strNewSign & strCommentLink & strContent
-            strInfoList = strInfoList & "</ul>"
+            strInfoList = strInfoList & "</div>"
 
             iCount = iCount + 1
             If iCount Mod 2 = 0 Then
