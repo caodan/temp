@@ -28,69 +28,49 @@ body {
 
 #nav {
 	overflow:hidden;
+	display: block;
 	color: #000;
 	font-weight: bold;
 	margin: 33px 0 0 400px;
 }
 
-#nav a:link, #nav a:visited, #nav a:active {
-	color: #003;
+#nav .nav-list {
+    display:inline;
+    float:left;
+    z-index:100;/*ie6 hacker*/
 }
 
-#nav a {
-	text-align: left;
-	padding: 5px 5px;
-	font-size: 13px;
+#nav .nav-list a {
+    color:#000;
+    display:block;
+    padding: 5px;
+    font-size: 13px;
 }
 
-.nav-list {
-	float: left;
+#nav .nav-list li a:hover {
+    background: url(../images/a_bg.gif) repeat-x;
 }
 
 #nav .nav-list ul {
-	margin-left: 0px;
-}
-
-.menu-item {
-	display:inline;
-	float: left;
-	z-index: 100;
-}
-
-.menu-item a {
-    color:#fff;
-    text-decoration:none;
-    display:block;
-    padding:0 13px;
-}
-
-.menu-item li a:hover {
-    text-decoration:none;
-	background: url(../images/a_bg.gif) repeat-x;
-}
-
-#nav ul {
     display:none;
     position:absolute;
     filter:alpha(opacity=90); /* IE transparent */
     -moz-opacity:0.9; /* Moz + FF transparent */
     opacity: 0.9; /* CSS3 transparent */
     background-color: #e0effd;
+    border:1px solid #999;
+    padding: 3px 0;
+    margin-left: 0px;
     z-index:5;
-	border:1px solid #999;
-	margin-left: -8px;
-	padding: 3px 0;
 }
 
-#nav .menu-item li a {
-	padding: 3px 10px;
-	font-weight: normal;
-	_zoom: 1;
-	_width: 53px;
+#nav .nav-list li {
+    width: 157px;
 }
 
-.menu-item li a:hover {
-    color:#FF0;
+#nav .nav-list li a:hover {
+    text-decoration:none;
+    color:#003;
 }
 
 #index-content {
