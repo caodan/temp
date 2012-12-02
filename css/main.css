@@ -156,9 +156,9 @@ body {
 }
 
 #search {
-	width: 400px;
+	width: 258px;
 	height: 20px;
-	margin: 10px 0 6px 0;
+	margin: 15px 0 22px 12px;
 }
 
 #search form {
@@ -166,10 +166,10 @@ body {
 }
 #search input {
 	vertical-align:middle;
-	padding: 2px 2px;
+	padding: 2px 4px;
 }
 #keyword {
-	width: 93px;
+	width: 123px;
 }
 #submit {
 	margin-right: 5px;
@@ -257,7 +257,7 @@ li.tit_bj_left{
 	clear: both;
 	margin-top: 0px;
 	border-top: none;
-	height: 80px;
+	height: 116px;
 	text-align: center;
 	padding-top: 6px;
 	padding-bottom: 6px;
@@ -265,14 +265,14 @@ li.tit_bj_left{
 }
 
 .text_div {
-	margin:6px 0 0 40px;
+	margin:8px 0 0 40px;
 	text-align:left;
 	height:auto;
 	display:block;
 	overflow:hidden;
 }
 .text_div a {
-	line-height: 18px;
+	line-height: 22px;
 	color: #000;
 	text-decoration:none;
 }
