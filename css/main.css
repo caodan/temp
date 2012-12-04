@@ -60,14 +60,14 @@ body {
     z-index: 5;
 }
 
-#nav .nav-list li {
+#nav-list-college li {
     width: 157px;
 }
 
 #nav .nav-list li a {
 	font-weight: normal;
 	text-decoration: none;
-	padding: 0 0 0 5px;
+	padding: 0 5px;
 	line-height: 20px;
 }
 
